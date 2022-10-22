@@ -29,40 +29,40 @@
 %------------------ Defining the most common environments ---------------
 
 \@ifundefined{exsheetgerman}{
-	\newcommand{\theexercise}{Exercise}
-	\newcommand{\thepoint}{Point}
-	\newcommand{\thepoints}{Points}
-	\newcommand{\thestudnumber}{Number}
-	\newcommand{\theanswer}{Answer}
+  \newcommand{\theexercise}{Exercise}
+  \newcommand{\thepoint}{Point}
+  \newcommand{\thepoints}{Points}
+  \newcommand{\thestudnumber}{Number}
+  \newcommand{\theanswer}{Answer}
 }{%
-	\newcommand{\theexercise}{Aufgabe}
-	\newcommand{\thepoint}{Punkt}
-	\newcommand{\thepoints}{Punkte}
-	\newcommand{\thestudnumber}{Personenkennzeichen}
-	\newcommand{\theanswer}{Antwort}
+  \newcommand{\theexercise}{Aufgabe}
+  \newcommand{\thepoint}{Punkt}
+  \newcommand{\thepoints}{Punkte}
+  \newcommand{\thestudnumber}{Personenkennzeichen}
+  \newcommand{\theanswer}{Antwort}
 }
 
 %Check whether we should show the answers
 \@ifundefined{exsheetshowanswers}{
-	\excludecomment{answer}
+  \excludecomment{answer}
 }{
-	\newenvironment{answer}{\vspace*{0.5em}\textit{\theanswer:} \hspace*{0.5em} }{}
+  \newenvironment{answer}{\vspace*{0.5em}\textit{\theanswer:} \hspace*{0.5em} }{}
 }
 
 \newcounter{excounter}
 \setcounter{excounter}{1}
 \newenvironment{exercise}[1][]{%
-	\vspace*{2em}%
-	\textbf{\theexercise~\arabic{excounter}}:
-	\ifthenelse{\isempty{#1}}{}{%
-		\ifnum#1=1%
-			\hfill[#1 \thepoint]%
-		\else%
-			\hfill[#1 \thepoints]%
-		\fi%
-	}%
-	\newline}
-{\addtocounter{excounter}{1}} 
+  \vspace*{2em}%
+  \textbf{\theexercise~\arabic{excounter}}:
+  \ifthenelse{\isempty{#1}}{}{%
+    \ifnum#1=1%
+      \hfill[#1 \thepoint]%
+    \else%
+      \hfill[#1 \thepoints]%
+    \fi%
+  }%
+  \newline}
+{\addtocounter{excounter}{1}}
 
 
 \def\@semester{}
@@ -78,12 +78,12 @@
 \newcommand{\institute}[1]{\def\@institute{#1}}
 
 \newcommand{\studentinfo}{%
-	{
-	Name: \underline{\hspace{6cm}}
-	\hfill
-	\thestudnumber: \underline{\hspace{4cm}}
-	\vspace*{2em}
-	}
+  {
+  Name: \underline{\hspace{6cm}}
+  \hfill
+  \thestudnumber: \underline{\hspace{4cm}}
+  \vspace*{2em}
+  }
 }
 
 
@@ -95,22 +95,22 @@
 
 \fancypagestyle{exsheet}
 {
-	\fancyhf{}%
+  \fancyhf{}%
   \fancyhead[LO,LE]{%
-			\begin{minipage}{70mm}
-				\@lva\\
-				\@semester
-			  \vspace{1mm}
-			\end{minipage}
-	}
+    \begin{minipage}{70mm}
+      \@lva\\
+      \@semester
+      \vspace{1mm}
+    \end{minipage}
+  }
   \fancyhead[RO,RE]{%
-			\begin{minipage}{70mm}
-				\raggedleft
-				\@institute\\
-				\@auth
-			  \vspace{1mm}
-			\end{minipage}
-	}
+    \begin{minipage}{70mm}
+      \raggedleft
+      \@institute\\
+      \@auth
+      \vspace{1mm}
+    \end{minipage}
+  }
 }
 
 \setlength{\headheight}{2.5em}
@@ -124,19 +124,19 @@
 \let\oldmaketitle\maketitle
 
 \renewcommand{\@maketitle}{%
-	\noindent
-	\begin{center}
-		{\LARGE\bf\@title}\\
-		\vspace{1em}\@date
-	\end{center}
+  \noindent
+  \begin{center}
+    {\LARGE\bf\@title}\\
+    \vspace{1em}\@date
+  \end{center}
 
-	\vspace{4em}
+  \vspace{4em}
 }
 
 \renewcommand{\maketitle}{%
-	\oldmaketitle
-	\thispagestyle{exsheet}
-	\pagestyle{exsheet}
+  \oldmaketitle
+  \thispagestyle{exsheet}
+  \pagestyle{exsheet}
 }
 
 
@@ -145,6 +145,6 @@
 %------------------ Defining specific commands environments ---------------
 
 \newenvironment{choices}{%
-	\begin{itemize}[label=$\square$, labelsep=2ex]
-	}{\end{itemize}}
+  \begin{itemize}[label=$\square$, labelsep=2ex]
+  }{\end{itemize}}
 
