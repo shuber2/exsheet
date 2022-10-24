@@ -125,6 +125,12 @@ führt zu folgendem zusätzlichem Verhalten:
   losen Blättern zu Klausuren und verhindert, dass Blätter von Student·innen
   vorgeschrieben werden können.
 
+Durch die automatische Berechnung der Punktesummen wird das **effiziente
+Generieren von Klausuren** über Fragenkataloge erleichtert: Man kann in einem
+Sammeldokumente Fragen sammeln, die vom Umfang mehrere Klausuren füllen und für
+die Erstellung konkreter Klausuren fragen löschen, um auf die gewünschte
+Punktezahl zu kommen.
+
 Die Kopfzeile enthält jene Informationen, welche rasch erkennen lassen sollen,
 um welche Klausur es sich handelt. Das ist für Sammelklausuren, wo gleichzeitig
 viele verschiedene Klausuren durchgeführt werden, für die Beaufsichtigung
