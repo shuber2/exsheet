@@ -1,0 +1,90 @@
+% grep begin{exercise} exsheet2-demo-klausur-en.tex | sed 's/^.*\[\(.*\)\]/\1/' | awk ' { s += $1 } END { print s } '
+\documentclass[twoside,exam,showanswers]{exsheet2}
+
+\usepackage{fontspec}
+
+
+
+\title{2.\ Final Exam}
+\course{ILV Network-oriented Software Engineering}
+\curriculum{ITS-B, ITSB-B, WIN}
+
+\date{21.10.2022}
+\semester{SS 2022}
+
+\author{Stefan Huber}
+\institute{Department IT}
+\school{FH Salzburg}
+\duration{90 min.}
+
+
+\instructions{%
+\textbf{Permitted aids:}
+A non-programmable calculator is allowed. Beyond that no additional aids are
+permitted. Turn off your mobile phone and stow it. In case of urgent reasons of
+availability contact the exam supervisor.
+
+\medskip
+
+\textbf{Notices:}
+Write readable with a non-erasable pen in blue or black color. If you need
+additional paper, use only the provided, stamped sheets of paper. Keep the
+stapling intact. Put your name and number on all sheets you hand over.
+
+\medskip
+
+Give precise and concise answers.
+
+\bigskip
+
+It is not permitted to copy or distribute, even only partially, without
+explicit, written permit to do so. Making private copies is regulated by
+§\,42\ UrhG.
+
+\begin{center}
+  All the best!
+\end{center}
+
+}
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{exercise}[6]
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+\begin{answer}
+  $\vec{a} = \frac{\vec{F}}{m}$
+\end{answer}
+
+
+\begin{exercise}[4]
+  Kreuzen Sie die richtigen Anworten an:
+  \begin{choices}
+    \item $1 + 1 = 0 \pmod 2$
+    \item $1 + 1 = 1 \pmod 2$
+    \item $1 + 1 = 1 \pmod 3$
+    \item $1 + 1 = 5 \pmod 7$
+  \end{choices}
+\end{exercise}
+
+
+\begin{exercise}[1]
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+
+\newpage\null
+(Some empty page to create some space for student's notes but with exam header.)
+\newpage\null
+
+\end{document}

@@ -1,0 +1,87 @@
+% grep begin{exercise} exsheet2-demo-klausur.tex | sed 's/^.*\[\(.*\)\]/\1/' | awk ' { s += $1 } END { print s } '
+\documentclass[ngerman,twoside,exam,showanswers]{exsheet2}
+
+\usepackage{fontspec}
+
+
+\title{4.\ Klausur (Teil 2)}
+\course{VO Microcontroller}
+\curriculum{ITS-B, ITSB-B}
+
+\date{21.10.2022}
+\semester{SS 2022}
+
+\author{Stefan Huber}
+\institute{Department IT}
+\school{FH Salzburg}
+\duration{90 min.}
+
+
+\instructions{%
+\textbf{Hilfsmittel:}
+Es ist ein nicht-programmierbarer Taschenrechner erlaubt. Darüber hinaus sind
+keine Hilfsmittel gestattet. Mobiltelefon sind auszuschalten und zu verstauen.
+Dringender Erreichbarkeit mit der Klausuraufsicht absprechen.
+
+\medskip
+
+\textbf{Hinweise:}
+Schreiben Sie leserlich mit Kugelschreiber in blau oder schwarz. Als
+Zusatzblätter dürfen ausschließlich ausgegebene abgestempelten Blätter
+verwendet werden. Lösen Sie die Klammer nicht und beschriften Sie alle Blätter,
+die Sie abgeben, mit Namen und Personenkennzeichen.
+
+\medskip
+
+Antworten Sie präzise und nicht überschießend.
+
+\bigskip
+
+Die Vervielfältigung und Verbreitung, auch auszugsweise, ist nur nach
+vorheriger, schriftlicher Zustimmung erlaubt. Die Erstellung von Privatkopien
+unterliegt §\,42\ UrhG.
+
+\begin{center}
+  Alles Gute!
+\end{center}
+
+}
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{exercise}[6]
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+
+\begin{answer}
+  $\vec{a} = \frac{\vec{F}}{m}$
+\end{answer}
+
+
+\begin{exercise}[3]
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+
+\begin{exercise}[1]
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+
+\newpage\null
+(Some empty page to create some space for student's notes but with exam header.)
+\newpage\null
+
+\end{document}

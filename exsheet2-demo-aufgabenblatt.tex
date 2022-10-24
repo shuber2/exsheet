@@ -1,0 +1,33 @@
+% grep begin{exercise} exsheet2-demo-klausur.tex | sed 's/^.*\[\(.*\)\]/\1/' | awk ' { s += $1 } END { print s } '
+\documentclass[ngerman]{exsheet2}
+
+\usepackage{fontspec}
+
+\title{Aufgabenblatt 7}
+\course{ILV Numerik und Industrielle Algorithmen}
+\curriculum{ITS}
+
+\date{21.10.2022}
+\semester{WS 2022}
+
+\author{Stefan Huber}
+\institute{Department IT}
+\school{FH Salzburg}
+
+\begin{document}
+
+\maketitle
+
+\begin{exercise}
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+\begin{exercise}
+  Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
+  $\vec{F}$ nach Newton?
+  \vspace{2cm}
+\end{exercise}
+
+\end{document}
