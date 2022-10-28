@@ -1,4 +1,3 @@
-% grep begin{exercise} exsheet2-demo-klausur.tex | sed 's/^.*\[\(.*\)\]/\1/' | awk ' { s += $1 } END { print s } '
 \documentclass[ngerman]{exsheet2}
 
 \usepackage{fontspec}
@@ -17,6 +16,9 @@
 \begin{document}
 
 \maketitle
+
+% Do not start at exercise 1 but exercsie 12 for Aufgabenblatt 7
+\setcounter{exsheet2@excounter}{12}
 
 \begin{exercise}
   Welche Beschleunigung $\vec{a}$ erfährt eine träge Masse $m$ im Kraftfeld
