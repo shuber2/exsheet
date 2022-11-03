@@ -72,10 +72,10 @@ das Datum im ISO-Format erhalten, also yyyy-mm-dd. Wenn kein Datum gesetzt
 wird, dann wird das aktuelle Datum verwendet.
 
 
-## Aufgsabenblätter
+## Aufgabenblätter
 
 Die Klassse `exsheet2` erzeugt ohne weitere Optionen einfache Aufgabenblätter.
-Es werden zwei Sprachen unterstützt und notwendige Packete entsprechend geladen:
+Es werden zwei Sprachen unterstützt und notwendige Pakete entsprechend geladen:
 
 * american
 * german, ngerman
