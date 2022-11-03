@@ -23,7 +23,6 @@
 
 \@ifundefined{exsheetgerman}{
   \usepackage[american]{babel}
-  \usepackage[american]{isodate}
   \newcommand{\theexercise}{Exercise}
   \newcommand{\thepoint}{Point}
   \newcommand{\thepoints}{Points}
@@ -35,7 +34,6 @@
   \newcommand{\theof}{of}
 }{%
   \usepackage[ngerman]{babel}
-  \usepackage[german]{isodate}
   \newcommand{\theexercise}{Aufgabe}
   \newcommand{\thepoint}{Punkt}
   \newcommand{\thepoints}{Punkte}
@@ -46,6 +44,8 @@
   \newcommand{\thegrade}{Note}
   \newcommand{\theof}{von}
 }
+
+\usepackage[useregional]{datetime2}
 
 \RequirePackage{xifthen,geometry,fancyhdr,enumitem,comment,amssymb}
 
@@ -108,6 +108,10 @@
 \def\@instructions{\ }
 \newcommand{\instructions}[1]{\def\@instructions{#1}}
 
+\let\olddate\date
+\DTMsavenow{exsheet2@today}
+\renewcommand{\date}[1]{\olddate{#1}\DTMsavedate{exsheet2@today}{#1}}
+
 
 \geometry{a4paper,textwidth=16cm,textheight=23cm}
 
@@ -124,7 +128,7 @@
     \@semester
   }
   \fancyhead[C]{%
-    {\isodate \today}
+    {\DTMsetdatestyle{iso}\DTMusedate{exsheet2@today}}
   }
   \fancyhead[R]{%
     \@auth\\
@@ -194,7 +198,7 @@
 
         \vspace*{1em}
 
-        \today\\
+        {\DTMusedate{exsheet2@today}} \\
 
         \vspace*{1em}
         \@curriculum \\
