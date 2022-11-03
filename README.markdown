@@ -142,3 +142,22 @@ Zwei Beispiele befinden sich als Demo im Repository:
 
 * [exsheet2-demo-klausur.tex](exsheet2-demo-klausur-en.tex) ist eine deutsche Klausur
 * [exsheet2-demo-klausur-en.tex](exsheet2-demo-klausur-en.tex) ist eine englische Klausur
+
+
+## Abschlussprüfungen
+
+Abschlussprüfungen, etwa eine Bachelorprüfung, ist ähnlich zu einer Klausur,
+mit wenigen Unterschieden. Da die Prüfung in unserer Anwendung für
+Student·innen individualisiert ist, ist der Studierendenname im Titel. Die
+Formularelement für die Benotung und die Studierendeninformationen sind
+obsolet. Die Dauer ist durch den Prüfungsprozess vorgegeben und muss nicht am
+Deckblatt angegeben werden. Auch die Semesterangabe hat keine Bedeutung.
+
+Um diesen Fall abzubilden werden folgende Features unterstützt:
+* Wenn `\duration` oder `\semester` nicht gesetzt werden, dann wird die
+  Information nicht angezeigt.
+* Durch die Option `nostudentinfo` und `nogradeinfo` werden die jeweiligen
+  Formularelemente auf dem Deckblatt nicht angezeigt.
+
+Ein Beipsiel [exsheet2-demo-bapruefung.tex](exsheet2-demo-bapruefung.tex)
+befindet sich im Repository.
