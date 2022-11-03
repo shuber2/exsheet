@@ -67,7 +67,9 @@ weitergeleitet.
 
 Es können über folgende Befehle entsprechend die Daten zur Klausur gesetzt
 werden: `\title`, `\author`, `\date`, `\course`, `\curriculum`, `\semester`,
-`\institute`, `\school`, `\duration`, `\instructions`.
+`\institute`, `\school`, `\duration`, `\instructions`. Achtung, `\date` muss
+das Datum im ISO-Format erhalten, also yyyy-mm-dd. Wenn kein Datum gesetzt
+wird, dann wird das aktuelle Datum verwendet.
 
 
 ## Aufgsabenblätter
@@ -91,7 +93,7 @@ Aufgabenblatt mit einer Aufgabe lautet wie folgt:
 \course{ILV Numerik und Industrielle Algorithmen}
 \curriculum{ITS}
 
-\date{21.10.2022}
+\date{2022-10-21}
 \semester{WS 2022}
 
 \author{Stefan Huber}
