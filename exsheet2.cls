@@ -13,6 +13,8 @@
 \DeclareOption{naustrian}{\def \exsheetgerman{}}
 \DeclareOption{showanswers}{\def \exsheetshowanswers{}}
 \DeclareOption{exam}{\def \exsheetexam{}}
+\DeclareOption{nostudentinfo}{\def \exsheetnostudentinfo{}}
+\DeclareOption{nogradeinfo}{\def \exsheetnogradeinfo{}}
 
 
 \PassOptionsToClass{a4paper}{article}
@@ -96,16 +98,16 @@
 \def\@auth{}
 \renewcommand{\author}[1]{\def\@auth{#1}\def\@author{#1}}
 
-\def\@institute{\ }
+\def\@institute{}
 \newcommand{\institute}[1]{\def\@institute{#1}}
 
-\def\@school{\ }
+\def\@school{}
 \newcommand{\school}[1]{\def\@school{#1}}
 
-\def\@duration{\ }
+\def\@duration{}
 \newcommand{\duration}[1]{\def\@duration{#1}}
 
-\def\@instructions{\ }
+\def\@instructions{}
 \newcommand{\instructions}[1]{\def\@instructions{#1}}
 
 \let\olddate\date
@@ -187,7 +189,11 @@
         {\LARGE \bf \@title}
 
         \vspace*{1cm}
-        {\large \bf \@course\ (\@semester)}
+        {
+          \large\bf%
+          \@course
+          \ifthenelse{\equal{\@semester}{}}{}{ (\@semester)}
+        }
 
         \vspace*{1cm}
         \hrule
@@ -205,18 +211,25 @@
         \@institute \\
         \@school \\
 
-        \vspace*{1cm}
-        \theduration: \@duration
+        \ifthenelse{\equal{\@duration}{}}{}{%
+          \vspace*{1cm}
+          \theduration: \@duration
+        }
       \end{center}
 
       \vspace{4em}
       \@instructions
 
       \vfill
-      \makestudentinfo
 
-      \vspace{3em}
-      \makegradeinfo
+      \ifthenelse{\isundefined{\exsheetnostudentinfo}}{%
+        \makestudentinfo
+      }{}
+
+      \ifthenelse{\isundefined{\exsheetnogradeinfo}}{%
+        \vspace{3em}
+        \makegradeinfo
+      }{}
     \end{titlepage}
   }
 }

@@ -1,0 +1,50 @@
+% grep begin{exercise} exsheet2-demo-klausur-en.tex | sed 's/^.*\[\(.*\)\]/\1/' | awk ' { s += $1 } END { print s } '
+\documentclass[exam,nostudentinfo,nogradeinfo,german]{exsheet2}
+
+\usepackage{fontspec}
+
+
+
+\title{BA Prüfung (Max Student)}
+\course{Microcontroller}
+\curriculum{ITS-B}
+
+\date{2022-10-21}
+%\semester{SS 2022}
+
+\author{Stefan Huber}
+\institute{Department IT}
+\school{FH Salzburg}
+
+
+\instructions{%
+\textbf{Hilfsmittel:}
+Es ist ein nicht-programmierbarer Taschenrechner erlaubt. Darüber hinaus sind
+keine Hilfsmittel gestattet.
+
+\bigskip
+
+\textbf{Hinweise:}
+Die Vervielfältigung und Verbreitung, auch auszugsweise, ist nur nach
+vorheriger, schriftlicher Zustimmung erlaubt. Die Erstellung von Privatkopien
+unterliegt §\,42\ UrhG.
+
+\begin{center}
+  Alles Gute!
+\end{center}
+}
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{exercise}
+  Erläutern Sie das Gravitationsgesetz von Newton.
+\end{exercise}
+
+
+
+\end{document}
