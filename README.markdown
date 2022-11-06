@@ -16,11 +16,19 @@ Ich verwende die Klasse für zwei Kategorien von Anwendungsfällen:
 
 ## Installation
 
+Die einfache Lösung ist, dass man `exsheet2.cls` lokal in jedes Verzeichnis
+gibt, wo es verwendet wird, d.h. wo die betreffenden LaTeX Dokumente liegen.
+
 Die nachhaltige Lösung ist das Kopieren der Datei `exsheet2.cls` in ein
 [TEXINPUTS](https://www2.ph.ed.ac.uk/~wjh/tex/documents/environmental.pdf)
-Verzeichnis. Die schlechtere Alternativ ist, dass man `exsheet2.cls` lokal in
-jedes Verzeichnis gibt, wo es verwendet wird, d.h. wo die betreffenden LaTeX
-Dokumente liegen.
+Verzeichnis. Alternativ bietet sich das Klonen dieses Repositories und das
+Verlinken von `exsheet2.cls` in ein Verzeichnis in `TEXINPUTS` an. Das macht
+ein Update über git einfacher.
+
+Das originale Repository findet sich auf
+[git.sthu.org](https://git.sthu.org/?p=exsheet.git;a=summary). Ein Klon auf
+[github.com/shuber2/exsheet](https://github.com/shuber2/exsheet) macht das
+Verwalten von Issues und Pull Requests einfacher.
 
 
 ## Allgemeine Features
