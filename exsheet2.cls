@@ -138,7 +138,7 @@
   }
   \@ifundefined{exsheetexam}{}{%
     \fancyfoot[R]{%
-      \tiny nounce: \arabic{examnonce}
+      \tiny nonce: \arabic{examnonce}
     }
   }
 }
